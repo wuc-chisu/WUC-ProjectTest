@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'WUC Project',
-  description: 'Welcome to WUC Project built with Next.js',
+  title: 'Savory Haven - Fine Dining Restaurant',
+  description: 'Experience exceptional cuisine at Savory Haven, your destination for authentic, innovative dining.',
 }
 
 export default function RootLayout({
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
